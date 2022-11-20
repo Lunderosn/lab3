@@ -44,8 +44,14 @@ public class Function_Test {
     }
 
     @Test
-    public void nIs(){
+    public void nNotNull(){
         boolean check = Function.getN() != 0;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void xNotNull(){
+        boolean check = Function.getX() != 0;
         Assert.assertEquals(true, check);
     }
 
