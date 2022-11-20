@@ -43,5 +43,10 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void nIs(){
+        boolean check = Function.getN() != 0;
+        Assert.assertEquals(true, check);
+    }
 
 }
