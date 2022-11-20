@@ -25,4 +25,12 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void xCheck(){
+        boolean check = Function.getX() > 0;
+        Assert.assertEquals(true, check);
+    }
+
+
+
 }
