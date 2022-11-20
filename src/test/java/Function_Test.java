@@ -37,6 +37,11 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void xLess(){
+        boolean check = Function.getX() < 2147483647;
+        Assert.assertEquals(true, check);
+    }
 
 
 }
