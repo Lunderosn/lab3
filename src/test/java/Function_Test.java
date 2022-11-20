@@ -67,4 +67,9 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void functionCheckWrongResult(){
+        Assert.assertNotEquals(18, Function.func(),0.5);
+    }
+
 }
