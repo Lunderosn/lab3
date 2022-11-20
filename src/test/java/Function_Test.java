@@ -31,6 +31,45 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void nLess(){
+        boolean check = Function.getN() < 2147483647;
+        Assert.assertEquals(true, check);
+    }
 
+    @Test
+    public void xLess(){
+        boolean check = Function.getX() < 2147483647;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void nNotNull(){
+        boolean check = Function.getN() != 0;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void xNotNull(){
+        boolean check = Function.getX() != 0;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void nMore(){
+        boolean check = Function.getN() > -2147483647;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void xMore(){
+        boolean check = Function.getX() > -2147483647;
+        Assert.assertEquals(true, check);
+    }
+
+    @Test
+    public void functionCheckWrongResult(){
+        Assert.assertNotEquals(18, Function.func(),0.5);
+    }
 
 }
