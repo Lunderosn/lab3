@@ -55,4 +55,10 @@ public class Function_Test {
         Assert.assertEquals(true, check);
     }
 
+    @Test
+    public void nMore(){
+        boolean check = Function.getN() > -2147483647;
+        Assert.assertEquals(true, check);
+    }
+
 }
