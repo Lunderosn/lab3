@@ -11,12 +11,18 @@ public class Function_Test {
      * */
     @Before
     public void createObject(){
-        function = new Function();
+        function = new Function(10,1);
     }
 
     @Test
     public void functionResult(){
-        Assert.assertEquals(10.0, Function.func(10,1),0.5);
+        Assert.assertEquals(10.0, Function.func(),0.5);
+    }
+
+    @Test
+    public void nCheck(){
+        boolean check = Function.getN() > 0;
+        Assert.assertEquals(true, check);
     }
 
 }
