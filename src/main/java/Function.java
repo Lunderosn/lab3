@@ -26,15 +26,8 @@ public class Function {
         return n;
     }
 
-    public static void setN(int n) {
-        Function.n = n;
-    }
-
     public static int getX() {
         return x;
     }
 
-    public static void setX(int x) {
-        Function.x = x;
-    }
 }
