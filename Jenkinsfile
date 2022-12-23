@@ -2,7 +2,6 @@ pipeline {
     //runs on agent1
     agent { node { label 'agent1' } }
     stages {
-      
          stage('Back-end') {
             agent {
                 docker { image 'maven:3.8.6-eclipse-temurin-11' }
@@ -10,6 +9,6 @@ pipeline {
             steps {
                 sh 'mvn --version'
             }
-        
     }
+   }      
 }
