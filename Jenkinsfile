@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn -B'
+                sh 'mvn -B package --file pom.xml'
             }
         }
  
