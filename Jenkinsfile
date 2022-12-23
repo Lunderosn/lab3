@@ -4,13 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'g++ --coverage -g -O0  -fprofile-arcs -ftest-coverage -I/usr/include/gtest -L/usr/lib/x86_64-linux-gnu test_fun.cpp -lgtest -lpthread'
+                sh 'mvn -B'
             }
         }
-        stage('test') {
-            steps {
-                sh './a.out --gtest_output="xml:./tests.xml"; gcovr --xml coverage.cobertura.xml'
-            }
-        }
+ 
     }
 }
