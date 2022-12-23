@@ -2,13 +2,15 @@ pipeline {
     //runs on agent1
     agent { node { label 'agent1' } }
     stages {
-         stage('Back-end') {
-            agent {
-                docker { image 'maven:3.8.6-eclipse-temurin-11' }
-            }
+        stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'g++ --coverage -g -O0  -fprofile-arcs -ftest-coverage -I/usr/include/gtest -L/usr/lib/x86_64-linux-gnu test_fun.cpp -lgtest -lpthread'
             }
+        }
+        stage('test') {
+            steps {
+                sh './a.out --gtest_output="xml:./tests.xml"; gcovr --xml coverage.cobertura.xml'
+            }
+        }
     }
-   }      
 }
